@@ -5,9 +5,15 @@ spring:
     config:
       server:
         git:
-          uri:
+          uri: git@github.com:Alfreds0/springCloudSell-config.git
+          username: 292279223@qq.com
+          password: qq292279223
+          basedir: D:\work\springCloudSell\config\basedir
 eureka:
   client:
     service-url:
       deafultZone: http://localhost:8761/eureka
-
+management:
+  endpoints:
+    web:
+      expose: "*"
