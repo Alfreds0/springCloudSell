@@ -1,11 +1,10 @@
-package com.imooc.config;
-
+package com.imocc.apigaetway;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ConfigApplicationTests {
+class ApiGaetwayApplicationTests {
 
     @Test
     void contextLoads() {

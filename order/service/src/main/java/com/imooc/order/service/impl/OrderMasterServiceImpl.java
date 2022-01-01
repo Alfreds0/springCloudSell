@@ -42,6 +42,10 @@ public class OrderMasterServiceImpl implements OrderMasterService {
     @Override
     @Transient
     public OrderMasterDto create(OrderMasterDto orderMasterDto) {
+        //如果是秒杀场景
+        //1.读redis库存信息，判断库存减库存
+        //2.减库存并将新值重新设置进redis 有高并发需要加redis锁
+        //3.订单入库异常try catch 手动回滚redis
         String orderId = KeyUtil.getUniqueKey();
         //1.查询商品信息（调用商品服务）
         List<String> productIdList= orderMasterDto.getOrderDetailList().stream()

@@ -61,7 +61,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
             BeanUtils.copyProperties(e, productInfoOutPut);
             return productInfoOutPut;
         }).collect(Collectors.toList());
-        amqpTemplate.convertAndSend("productInfoOutPut", JsonUtil.toJson(productInfoOutPutList));
+        amqpTemplate.convertAndSend("productInfo", JsonUtil.toJson(productInfoOutPutList));
 
     }
     @Transient
