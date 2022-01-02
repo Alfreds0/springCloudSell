@@ -16,9 +16,9 @@ public class ApiGaetwayApplication {
         SpringApplication.run(ApiGaetwayApplication.class, args);
     }
 
-    @ConfigurationProperties("zuul")
-    @RefreshScope
-    public ZuulProperties zuulProperties() {
-        return new ZuulProperties();
-    }
+    //@ConfigurationProperties("zuul")
+    //@RefreshScope
+    //public ZuulProperties zuulProperties() {
+    //    return new ZuulProperties();
+    //}
 }
